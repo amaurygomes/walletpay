@@ -1,0 +1,80 @@
+{% load static %}
+
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse ">
+            <img src="{% static 'src/logo_wallet.png' %}" class="h-8" alt="Flowbite Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">WalletPay</span>
+
+        </a>
+        <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <button type="button"
+                class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
+                data-dropdown-placement="bottom">
+                <span class="sr-only">Open menu</span>
+                <img class="w-8 h-8 rounded-full"
+                    src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIHERESBxASEhIREBAQEBUSDRAPFxEVFxEWFhYTFRMaHSggGBomGxUWIjEhJTUrLi4uGB8zOjMsNyotLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEBAAMBAQEAAAAAAAAAAAAAAQUGBwQDAv/EAD8QAQABAgIFBwoDBgcAAAAAAAABAgMEEQUGEiExIkFRcYGRwRMUIzJCUmGhsdE0crIzYoKi4fAVJHODwuLx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AM6CAogCiAKIAogCiAKIAogCiAKIAogCiAKIAogCoAKioAAAAAAAAAAAAAAAAAAAAAAAAAAAACoqAAAAAAAAAPrh8PXip2cPTNU9ERn/AOM1oPV2rG5V4vOm3xiOFVf2huGFw1GFp2cPTFMRzRH16QajhdU7tzfiKqaPh68/Lc99GqFuP2l2ueqKY+sS2UBrdWqFr2LtyOvYnweHE6pXKPw1ymr4VRNE+MNyAcyxeCuYKcsVRNM82fCeqeEvO6ldtU3omm7EVRPGJjOGqab1a8lE16OjOI31UcZj8vT1A1gAAAAAAAAAAAFRUAAAAAAAbBqxobzyfK4mPR0zyYn25+0MPgMLONuUW7fGqcuqOMz3RLpGHs04emmizGVNMREQD68AAAAAAAAarrVoWMpv4WPjciP1xH1aq6nVTFUZVb4ndPxc603gf8OvVUR6s8qj8s/bfAPAAAAAAAAAACoqAAAAAAA2bUnDbdVy5V7MRRT1zvn5RHe29gtTaNnD5+9cqnuyjwZ0AAAAAAAABreuuG2rdFyONFWzPVV/WPm2RjNZaPKYW9nzUxV3TEg56AAAAAAAAACoqAAAAAAA3rU+rPDR8K64+efizbWNSL+dNy3PNVFcdsZT9IbOAAAAAAAAAx+sFWzhr2fuTHfuZBgtcb/ksPs89yumOyOVP0gGjgAAAAAAAAAqKgAAAAAAMloDHeY36KqvVnkV9U8/ZOUuhxv4OVN11V0v51R5K/PLojk5+1THjANgAAAAAAAAaLrZjfOr2zRPJtRs9dXteEdjZNYdKxo23lRPpK4mKI6OmqepoUznx3g/IAAAAAAAAAKioAAAAAAA/dm5NmYqtTMVROcTHNL8AN60Fp+nHxFGIypu8OiK/jT8fgzblTN6N1ku4TKm96SmPenlR1VfcG9DDYXWbD3/ANpVNueiunxjcyFvSFm56l23P+5SD0jz14+1R6923HXcp+7w4nWPD2OFe3PRRG18+AMsxemdNUaMjL1rkxyaY+tXRDXtI603MRnGEjydPTxq7+EMDVVNU51b5nfMzvzB9cXiqsZVNd+c6p+Xwjoh8AAAAAAAAAAABUVAAAAAAezR2jbmkassNTu56p3U09c+APG9mB0Xex34a3Mx708mnvltujNWrWEynEelr/ejkx1U/dm4jZ4A0y7qndoo2qa6aqo9mM47qp52Bu25szNN2JpqjjExlMdjqTy47R1rHxliqIq6J4THVMbwc1TJtmK1Qid+EuzHwrpz/mh4LmquIp9XYq6q8vrAMFkM5RqtiKvW2I/jz+kPbhtUJz/zV3d0UU/8p+wNXpiapypjOZ4RG+Z7Gdweq13EUbV6YtzPq01RMz/F0NpwGibOA/D0Rn708qrve4HOsdoa9gd92iZp96nlR/TtY91VidJaAs47OYjYr96mMu+nhINAGR0poe7o2fSxtUc1dMbu3oY4AAAAAAAAFRUAAABtWregM8r2Oj426J+VVUeAPLoLV2cXlcxudNvjTTwmv7Q3GxZpw9MU2aYppjhERlD6AAAAAAAAAAAAAJXTFcTFcRMTumJjOJ7Gqac1a2c7mjo6Zqt+NP2bYA5XMZcUbprFoCMVncwcZXONVMbor/7fVpkxlxBAAAAAAVFQAHt0RgJ0jdpojhxrnopj+8gZXVfQ3nU+VxUcimeRE+3PT1R9W5vxatRZpim1GVNMRER0RD9gAAAAAAAAAAAAAAAANX1q0NnE38LG+N92I5/348W0JMZ8QcsRltYtGf4bc9HHo699Hw6aexiQAAAAVFQBvmq+j/M7MVVxy7mVVW7hHsx/fS1PQeD8+v0Uz6sTtVfljf8APdHa6Lw4AAAAAAAAAAAAAAAAAAAAA8GmsBGkbVVHtRyqJ6Ko/vLtc6mMuO6ed1RomteC81vzVRHJuRtx1+1Hj2gwoAAAKioDbdScLs03LtXtTFFPVG+fnMdzaGO1fseb4e1HTTtT11crxZEAAAAAAAAAAAAAAAAAAAABgtcMN5axtRxt1RV2Tun6x3M6+GNs+cW66J9qiqnvgHMkXhxQAAFKY2piI55yH1wUbVy3HTcoj+aAdMs0eTppiOaIjuh+wAAAAAAAAAAAAAAAAAAAAAABzPSVvyN67T0XK/1S8zI6wxs4m9+fPvpiWOAABX3wH7W1/q2/1wAOmgAAAAAAAAAAAAAAAAAAAAAAA55rH+Kvfmp/RSxoAAA//9k="
+                    alt="user photo">
+            </button>
+            <!-- Dropdown menu -->
+            <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
+                id="user-dropdown">
+                <div class="px-4 py-3">
+                    <span class="block text-sm text-gray-900 dark:text-white">Amaury Gomes</span>
+                    <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">amaury_mju@hotmail.com</span>
+                </div>
+                <ul class="py-2" aria-labelledby="user-menu-button">
+
+                    <li>
+                        <a href="#"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Perfil</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Configurações</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'logout' %}"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sair</a>
+                    </li>
+                </ul>
+            </div>
+            <button data-collapse-toggle="navbar-user" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-user" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
+            <ul
+                class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                <li>
+                    <a href="{% url 'index' %}"
+                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'solicitacoes' %}"
+                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Solicitações
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'pagamentos' %}"
+                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pagamentos</a>
+                </li>
+                <li>
+                    <a href="{% url 'relatorios' %}"
+                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Relatórios</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

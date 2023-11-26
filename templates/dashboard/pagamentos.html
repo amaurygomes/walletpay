@@ -1,0 +1,232 @@
+{% extends "dashboard/_base.html" %}
+
+{% block content %}
+
+
+
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <div
+        class="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white">
+        <div>
+            <button id="dropdownActionButton" data-dropdown-toggle="dropdownAction"
+                class="inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                type="button">
+                <span class="sr-only">Ação</span>
+                Ação
+                <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 10 6">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 1 4 4 4-4" />
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownAction"
+                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownActionButton">
+                    <li>
+                        <a href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Pagar
+                            Todos</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Pagar
+                            Selecionados</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+        <label for="table-search" class="sr-only">Buscar</label>
+        <div class="relative">
+            <div class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
+                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                </svg>
+            </div>
+            <input type="text" id="table-search-users"
+                class="block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Buscar Entregador">
+        </div>
+    </div>
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="p-4">
+                    <div class="flex items-center">
+
+                    </div>
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Entregador
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Telefone
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Solicitou
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Detalhes
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <td class="w-4 p-4">
+                    <div class="flex items-center">
+                        <input id="checkbox-table-search-1" type="checkbox"
+                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
+                    </div>
+                </td>
+                <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                    <img class="w-10 h-10 rounded-full"
+                        src="data:image/jpeg;base64,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"
+                        alt="Jese image">
+                    <div class="ps-3">
+                        <div class="text-base font-semibold">Neil Sims</div>
+                        <div class="font-normal text-gray-500">neil.sims@flowbite.com</div>
+                    </div>
+                </th>
+                <td class="px-6 py-4">
+                    (67)9999-9999
+                </td>
+                <td class="px-6 py-4">
+                    <div class="flex items-center">
+                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div> Solicitado
+                    </div>
+                </td>
+                <td class="px-6 py-4">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Ver</a>
+                </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <td class="w-4 p-4">
+                    <div class="flex items-center">
+                        <input id="checkbox-table-search-2" type="checkbox"
+                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="checkbox-table-search-2" class="sr-only">checkbox</label>
+                    </div>
+                </td>
+                <th scope="row"
+                    class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <img class="w-10 h-10 rounded-full"
+                        src="data:image/jpeg;base64,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"
+                        alt="Jese image">
+                    <div class="ps-3">
+                        <div class="text-base font-semibold">Bonnie Green</div>
+                        <div class="font-normal text-gray-500">bonnie@flowbite.com</div>
+                    </div>
+                </th>
+                <td class="px-6 py-4">
+                    (67)9999-9999
+                </td>
+                <td class="px-6 py-4">
+                    <div class="flex items-center">
+                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div> Solicitado
+                    </div>
+                </td>
+                <td class="px-6 py-4">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Ver</a>
+                </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <td class="w-4 p-4">
+                    <div class="flex items-center">
+                        <input id="checkbox-table-search-2" type="checkbox"
+                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="checkbox-table-search-2" class="sr-only">checkbox</label>
+                    </div>
+                </td>
+                <th scope="row"
+                    class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <img class="w-10 h-10 rounded-full"
+                        src="data:image/jpeg;base64,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"
+                        alt="Jese image">
+                    <div class="ps-3">
+                        <div class="text-base font-semibold">Jese Leos</div>
+                        <div class="font-normal text-gray-500">jese@flowbite.com</div>
+                    </div>
+                </th>
+                <td class="px-6 py-4">
+                    (67)9999-9999
+                </td>
+                <td class="px-6 py-4">
+                    <div class="flex items-center">
+                        <div class="h-2.5 w-2.5 rounded-full bg-red-500 me-2"></div> Sem Saldo
+                    </div>
+                </td>
+                <td class="px-6 py-4">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Ver</a>
+                </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <td class="w-4 p-4">
+                    <div class="flex items-center">
+                        <input id="checkbox-table-search-2" type="checkbox"
+                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="checkbox-table-search-2" class="sr-only">checkbox</label>
+                    </div>
+                </td>
+                <th scope="row"
+                    class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <img class="w-10 h-10 rounded-full"
+                        src="data:image/jpeg;base64,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"
+                        alt="Jese image">
+                    <div class="ps-3">
+                        <div class="text-base font-semibold">Thomas Lean</div>
+                        <div class="font-normal text-gray-500">thomes@flowbite.com</div>
+                    </div>
+                </th>
+                <td class="px-6 py-4">
+                    (67)9999-9999
+                </td>
+                <td class="px-6 py-4">
+                    <div class="flex items-center">
+                        <div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div> Solicitado
+                    </div>
+                </td>
+                <td class="px-6 py-4">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Ver</a>
+                </td>
+            </tr>
+            <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <td class="w-4 p-4">
+                    <div class="flex items-center">
+                        <input id="checkbox-table-search-3" type="checkbox"
+                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="checkbox-table-search-3" class="sr-only">checkbox</label>
+                    </div>
+                </td>
+                <th scope="row"
+                    class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <img class="w-10 h-10 rounded-full"
+                        src="data:image/jpeg;base64,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"
+                        alt="Jese image">
+                    <div class="ps-3">
+                        <div class="text-base font-semibold">Leslie Livingston</div>
+                        <div class="font-normal text-gray-500">leslie@flowbite.com</div>
+                    </div>
+                </th>
+                <td class="px-6 py-4">
+                    (67)9999-9999
+                </td>
+                <td class="px-6 py-4">
+                    <div class="flex items-center">
+                        <div class="h-2.5 w-2.5 rounded-full bg-red-500 me-2"></div> Sem Saldo
+                    </div>
+                </td>
+                <td class="px-6 py-4">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Ver</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+{% endblock content %}
