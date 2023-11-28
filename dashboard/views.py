@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from efipay import EfiPay
+from efipay import EfiPay # Importação SDK EFIPAY
 from efi.credentials import credentials
-from .models import API
+from .models import API # Models para configuração dea API EFIPAY
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib import messages
 from django.contrib.auth import update_session_auth_hash
@@ -29,8 +29,7 @@ def index(request):
 
 @login_required
 def solicitacoes(request):
-    response =  efi.pix_list_evp()
-    print(response)
+    
 
     contexto = {
         
@@ -40,12 +39,12 @@ def solicitacoes(request):
 
 
 @login_required
-def pagamentos(request):
+def entregadores(request):
     contexto = {
         
     }
 
-    return render(request, 'dashboard/pagamentos.html', contexto)
+    return render(request, 'dashboard/entregadores.html', contexto)
 
 
 @login_required
@@ -56,13 +55,6 @@ def relatorios(request):
 
     return render(request, 'dashboard/relatorios.html', contexto)
 
-@login_required
-def password(request):
-    contexto = {
-        
-    }
-
-    return render(request, 'dashboard/change_password.html', contexto)
 
 
 @login_required
@@ -78,7 +70,7 @@ def config(request):
 
 
 
-class ChangePasswordForm(forms.Form):
+class ChangePasswordForm(forms.Form): # Form personalizado para alterar senha
     old_password = forms.CharField(label='Senha Antiga', widget=forms.PasswordInput)
     new_password = forms.CharField(label='Nova Senha', widget=forms.PasswordInput)
     confirm_new_password = forms.CharField(label='Confirmar Nova Senha', widget=forms.PasswordInput)
