@@ -7,38 +7,49 @@
 
 
 
-<form class="max-w-sm mx-auto" method="post">
-    {% csrf_token %}
 
 
 
-    <h1 class=" p-10 flex items-center text-5xl font-extrabold dark:text-gray-900">WalletPay<span
+
+
+
+<div
+    class="mx-auto w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+
+
+    <h1 class="py-5 flex items-center text-5xl font-extrabold dark:text-white">WalletPay<span
             class="bg-blue-100 text-blue-800 text-2xl font-semibold me-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-2">Admin</span>
     </h1>
 
 
+    <form class="max-w-sm mx-auto" method="post">
+        {% csrf_token %}
+        <h5 class="text-xl font-medium text-gray-900 dark:text-white">Logar no Sistema</h5>
+        <div>
+            <label for="id_username"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Usuario</label>
+            <input type="text" name="username"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                placeholder="WalletPay" required>
+        </div>
+        <div>
+            <label for="id_password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Senha</label>
+            <input type="password" name="password" id="password" placeholder="••••••••"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                required>
+        </div>
 
-
-    <div class="mb-5">
-        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-900" for="id_username">Usuario</label>
-        <input type="text" name="username"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            required>
-    </div>
-    <div class="mb-5">
-        <label for="id_password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-900">Senha</label>
-        <input type="password" name="password"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            required>
-    </div>
-
-    <button type="submit"
-        class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">Entrar</button>
-
-    </div>
-
-
-</form>
+        <div class="py-6">
+            <button type="submit"
+                class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login
+            </button>
+        </div>
+        <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
+            Para redefinir senha fale com o <a href="#"
+                class="text-blue-700 hover:underline dark:text-blue-500">Suporte</a>
+        </div>
+    </form>
+</div>
 
 
 

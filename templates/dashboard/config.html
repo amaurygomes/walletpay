@@ -10,27 +10,28 @@
     <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 rounded-t-lg bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:bg-gray-900"
         id="defaultTab" data-tabs-toggle="#defaultTabContent" role="tablist">
         <li class="me-2">
-            <button id="statistics-tab" data-tabs-target="#statistics" type="button" role="tab"
-                aria-controls="statistics" aria-selected="true"
-                class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300">Resumo</button>
+            <button id="status-tab" data-tabs-target="#status" type="button" role="tab" aria-controls="status"
+                aria-selected="true"
+                class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300">Status</button>
         </li>
 
         <li class="me-2">
-            <button id="services-tab" data-tabs-target="#services" type="button" role="tab" aria-controls="services"
+            <button id="producao-tab" data-tabs-target="#producao" type="button" role="tab" aria-controls="producao"
                 aria-selected="false"
-                class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300">Dicas</button>
+                class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300">API
+                Keys</button>
         </li>
 
         <li class="me-2">
-            <button id="support-tab" data-tabs-target="#support" type="button" role="tab" aria-controls="support"
+            <button id="cert-tab" data-tabs-target="#cert" type="button" role="tab" aria-controls="cert"
                 aria-selected="false"
-                class="inline-block p-4 text-blue-600 rounded-ss-lg hover:bg-gray-100 dark:bg-gray-900 dark:hover:bg-gray-700 dark:text-blue-500">Suporte</button>
+                class="inline-block p-4 text-blue-600 rounded-ss-lg hover:bg-gray-100 dark:bg-gray-900 dark:hover:bg-gray-700 dark:text-blue-500">Certificados</button>
         </li>
 
     </ul>
     <div id="defaultTabContent">
-        <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-900" id="support" role="tabpanel"
-            aria-labelledby="support-tab">
+        <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-900" id="cert" role="tabpanel"
+            aria-labelledby="cert-tab">
             <h2 class="mb-3 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">Suporte do Sistema
                 WalletPay</h2>
             <p class="mb-3 text-gray-500 dark:text-gray-400">
@@ -39,13 +40,14 @@
                 quiser nos enviar sugestões, entre em contato. Nossa equipe está disponível para tornar sua experiência
                 com o Sistema WalletPay melhor possível.
 
-
+                <br><br> Como nos contatar:
 
                 <br><br> Whatsapp: (67) 99104-4105
                 <br>E-mail: amaury_mju@hotmail.com
                 <br>Horário de Atendimento:
                 <br>Segunda a sexta-feira, das 9h às 18h (horário local).
 
+                <br><br>Agradecemos por escolher nossosserviços e estamos prontos para ajudar no que precisar!
 
                 <br><br>Atenciosamente,
                 Equipe de Suporte do Codeneiz
@@ -60,8 +62,8 @@
                 </svg>
             </a>
         </div>
-        <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-900" id="services" role="tabpanel"
-            aria-labelledby="services-tab">
+        <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-900" id="producao" role="tabpanel"
+            aria-labelledby="producao-tab">
             <h2 class="mb-5 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">Como usar o Sistema
             </h2>
             <!-- List -->
@@ -72,7 +74,7 @@
                         <path
                             d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
                     </svg>
-                    <span class="leading-tight">Somente Administradores podem cadastrar novos usuários.</span>
+                    <span class="leading-tight">Lorem ipsum dolor sit amet</span>
                 </li>
                 <li class="flex space-x-2 rtl:space-x-reverse items-center">
                     <svg class="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500" aria-hidden="true"
@@ -80,8 +82,7 @@
                         <path
                             d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
                     </svg>
-                    <span class="leading-tight">Somente Administradores podem Alterar configuraçõs de conexção com
-                        API.</span>
+                    <span class="leading-tight">Nunc ipsum turpis</span>
                 </li>
                 <li class="flex space-x-2 rtl:space-x-reverse items-center">
                     <svg class="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500" aria-hidden="true"
@@ -89,9 +90,7 @@
                         <path
                             d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
                     </svg>
-                    <span class="leading-tight">Para melhor segurança é recomendavel fazer logout o sistema quando não
-                        estiver
-                        utilizando.</span>
+                    <span class="leading-tight">Curabitur pharetra et diam in egestas</span>
                 </li>
                 <li class="flex space-x-2 rtl:space-x-reverse items-center">
                     <svg class="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500" aria-hidden="true"
@@ -99,28 +98,13 @@
                         <path
                             d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
                     </svg>
-                    <span class="leading-tight">Pode demorar algum tempo para que a confirmação dos pagamentos sejam
-                        apresentadas no sistema.</span>
+                    <span class="leading-tight">Phasellus eu ligula metus</span>
                 </li>
             </ul>
         </div>
-        <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-900" id="statistics" role="tabpanel"
-            aria-labelledby="statistics-tab">
-            <dl
-                class="grid max-w-screen-xl grid-cols-2 gap-8 p-4 mx-auto text-gray-900 sm:grid-cols-3 xl:grid-cols-6 dark:text-white sm:p-8">
-                <div class="flex flex-col">
-                    <dt class="mb-2 text-3xl font-extrabold">R$ 4.364,00</dt>
-                    <dd class="text-gray-500 dark:text-gray-400">Saldo a pagar</dd>
-                </div>
-                <div class="flex flex-col">
-                    <dt class="mb-2 text-3xl font-extrabold">R$ 729,50</dt>
-                    <dd class="text-gray-500 dark:text-gray-400">Saldo solicitado</dd>
-                </div>
-                <div class="flex flex-col">
-                    <dt class="mb-2 text-3xl font-extrabold">R$ {{saldo}}</dt>
-                    <dd class="text-gray-500 dark:text-gray-400">Saldo API</dd>
-                </div>
-            </dl>
+        <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-900" id="status" role="tabpanel"
+            aria-labelledby="status-tab">
+            Status aqui
         </div>
     </div>
 </div>

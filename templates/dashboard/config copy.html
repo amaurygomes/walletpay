@@ -1,0 +1,33 @@
+{% extends "dashboard/_base.html" %}
+
+{% block content %}
+
+
+<form method="post" enctype="multipart/form-data" class="max-w-sm mx-auto">
+    <div class="mb-5">
+        {% csrf_token %}
+        <label for="name">Nome da API:</label><br>
+        <input type="text" id="name" name="name" placeholder="{{ api.name }}"><br><br>
+
+        <label for="client_id">Client ID:</label><br>
+        <input type="text" id="client_id" name="client_id" placeholder="{{ api.client_id }}"><br><br>
+
+        <label for="client_secret">Client Secret:</label><br>
+        <input type="text" id="client_secret" name="client_secret" placeholder="{{ api.client_id }}"><br><br>
+
+        <label for="sandbox">Sandbox:</label>
+        <input type="checkbox" id="sandbox" name="sandbox" value="1"><br><br>
+
+        <label for="certificado_producao">Certificado de Produção (PEM):</label><br>
+        <input type="file" id="certificado_producao" name="certificado_producao" accept=".pem"><br><br>
+
+        <label for="certificado_homologacao">Certificado de Homologação (PEM):</label><br>
+        <input type="file" id="certificado_homologacao" name="certificado_homologacao" accept=".pem"><br><br>
+
+        <input type="submit" value="Enviar">
+    </div>
+</form>
+
+
+
+{% endblock content %}
